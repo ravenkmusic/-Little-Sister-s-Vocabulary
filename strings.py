@@ -13,15 +13,13 @@ def make_word_groups(vocab_words):
 
 
 def remove_suffix_ness(word):
-    """Remove the suffix from the word while keeping spelling in mind.
-
-    :param word: str - of word to remove suffix from.
-    :return: str - of word with suffix removed & spelling adjusted.
-
-    For example: "heaviness" becomes "heavy", but "sadness" becomes "sad".
-    """
-
-    pass
+    rootWord = word[-4];
+    if rootWord.endswith("i"):
+        correctedRootWord = rootWord[-1] + "y"
+        return correctedRootWord
+    else:
+        return rootWord
+    
 
 
 def adjective_to_verb(sentence, index):
