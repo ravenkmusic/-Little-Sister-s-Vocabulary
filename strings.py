@@ -2,28 +2,28 @@
 import string
 
 def add_prefix_un(word):
-    newWord = "un" + word
-    return newWord
+    NewWord = "un" + word
+    return NewWord
 
 
 def make_word_groups(vocab_words):
     prefix = vocab_words[0]
-    newWords = f" :: {prefix}".join(vocab_words)
-    return newWords
+    NewWords = f" :: {prefix}".join(vocab_words)
+    return NewWords
 
 
 def remove_suffix_ness(word):
-    rootWord = word[:-4]
-    if rootWord.endswith("i"):
-        correctedRootWord = rootWord[:-1] + "y"
+    RootWord = word[:-4]
+    if RootWord.endswith("i"):
+        correctedRootWord = RootWord[:-1] + "y"
         print(correctedRootWord)
         return correctedRootWord
     else:
-        return rootWord
+        return RootWord
 
 def adjective_to_verb(sentence, index):
-    newSentence = sentence.translate(str.maketrans('', '', string.punctuation))
-    splitSentence = newSentence.split()
+    NewSentence = sentence.translate(str.maketrans('', '', string.punctuation))
+    splitSentence = NewSentence.split()
     word = splitSentence[index]
     transformedWord = word + 'en'
     
