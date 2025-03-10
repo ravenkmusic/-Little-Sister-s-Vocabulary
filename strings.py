@@ -1,5 +1,5 @@
 """Functions for creating, transforming, and adding prefixes to strings."""
-
+import string
 
 def add_prefix_un(word):
     newWord = "un" + word
@@ -22,6 +22,9 @@ def remove_suffix_ness(word):
         return rootWord
 
 def adjective_to_verb(sentence, index):
-    word = sentence.split()[index]
-    transformedWord = word + "en"
+    newSentence = sentence.translate(str.maketrans('', '', string.punctuation))
+    splitSentence = newSentence.split()
+    word = splitSentence[index]
+    transformedWord = word + 'en'
+    
     return transformedWord
