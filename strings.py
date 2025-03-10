@@ -13,14 +13,14 @@ def make_word_groups(vocab_words):
 
 
 def remove_suffix_ness(word):
-    rootWord = word[-4];
+    rootWord = word[:-4];
+    print(rootWord)
     if rootWord.endswith("i"):
         correctedRootWord = rootWord[-1] + "y"
+        print(correctedRootWord)
         return correctedRootWord
     else:
         return rootWord
-    
-
 
 def adjective_to_verb(sentence, index):
     """Change the adjective within the sentence to a verb.
