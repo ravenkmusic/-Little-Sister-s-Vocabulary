@@ -9,7 +9,6 @@ def add_prefix_un(word):
 def make_word_groups(vocab_words):
     prefix = vocab_words[0]
     newWords = f" :: {prefix}".join(vocab_words)
-    print(newWords)
     return newWords
 
 
