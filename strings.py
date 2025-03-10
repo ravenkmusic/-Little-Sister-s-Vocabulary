@@ -16,7 +16,7 @@ def remove_suffix_ness(word):
     rootWord = word[:-4];
     print(rootWord)
     if rootWord.endswith("i"):
-        correctedRootWord = rootWord[:1] + "y"
+        correctedRootWord = rootWord[:-1] + "y"
         print(correctedRootWord)
         return correctedRootWord
     else:
