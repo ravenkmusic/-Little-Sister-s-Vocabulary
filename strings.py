@@ -13,7 +13,7 @@ def make_word_groups(vocab_words):
 
 
 def remove_suffix_ness(word):
-    rootWord = word[:-4];
+    rootWord = word[:-4]
     if rootWord.endswith("i"):
         correctedRootWord = rootWord[:-1] + "y"
         print(correctedRootWord)
